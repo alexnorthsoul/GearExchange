@@ -1,0 +1,23 @@
+- content_for :page_title, t(:categories)
+- content_for :page_header, t(:categories)
+
+= link_to fa_icon(:plus, text: t(:add_category)), new_admin_category_path, class:'button success'
+
+== render 'search'
+
+table.full-width
+  thead
+    tr
+      th.name        = t(:name)
+      th.parent      = t(:parent)
+      th.description = t(:description)
+      th.actions     = t(:actions)
+  tbody
+    - categories.each do |category|
+      tr
+        td.name        = category.name
+        td.parent      = category.parent.present? ? category.parent.name : ""
+        td.description = truncate(category.description, length: 40)
+        td.actions
+          = link_to fa_icon(:pencil), edit_admin_category_path(category)
+          = link_to fa_icon(:trash), [:admin, category], data: {confirm: t('are_you_sure?')}, method: :delete

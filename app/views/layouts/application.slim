@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    = render 'admin/layouts/head'
+
+    body id="page--#{controller.controller_name}-#{controller.action_name}"
+      = render 'layouts/header'
+
+      main#main-content role="main"
+
+        #content
+          - if content_for?(:page_header)
+            h2.page-header = yield :page_header
+
+          = yield

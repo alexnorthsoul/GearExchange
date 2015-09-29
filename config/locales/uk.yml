@@ -1,0 +1,21 @@
+uk:
+  # WORDS - УСІ ЗАГАЛЬНІ СЛОВА
+  front: Фронт
+  dashboard: Панель управління
+  about: Про проект
+  name: Назва
+  description: Опис
+  parent: Батько
+  actions: Дії
+  are_you_sure?: Ви впевнені ?
+  edit: Редагувати
+  delete: Знищити
+  back: Назад
+  seach: Пошук
+
+  # CATEGORIES - КАТЕГОРІЇ
+  category: Категорія
+  categories: Категорії
+  add_category: Додати категорію
+  save_category: Зберегти категорію
+  edit_category: Редагувати категорію

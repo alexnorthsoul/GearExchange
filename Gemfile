@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'foundation-rails'
+gem 'font-awesome-rails'
 gem 'slim-rails'
 
 # -------------------- API ----------------------
@@ -30,6 +31,8 @@ gem 'flutie'
 gem 'kaminari'
 gem 'inline_svg'
 gem 'breadcrumble'
+gem 'awesome_nested_set'
+gem 'ransack'
 
 # --------------- DEV & TEST---------------------
 group :development, :test do
@@ -39,7 +42,6 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
-  gem 'byebug'
   gem 'pry-rails'
   gem 'did_you_mean'
   gem 'fuubar'
