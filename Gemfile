@@ -46,6 +46,7 @@ group :development, :test do
   gem 'fuubar'
   gem 'quiet_assets'
   gem 'rspec-rails'
+  gem 'byebug'
 end
 
 group :test do
