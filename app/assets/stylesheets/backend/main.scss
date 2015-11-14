@@ -1,0 +1,33 @@
+@import 'colors';
+
+#main-admin-content {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  .full-width {
+    width: 100%;
+  }
+
+  .actions {
+    width: 10%;
+    text-align: center;
+    a {
+      font-size: 1.5em;
+      display: inline-block;
+      margin-right: 15px;
+    }
+  }
+
+  .search-panel {
+    background-color: $white-smoke;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    .row {
+      margin-left: 0px;
+    }
+    .button {
+      margin-top: 15px;
+    }
+  }
+}

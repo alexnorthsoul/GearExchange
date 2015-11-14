@@ -1,0 +1,25 @@
+uk:
+  # MESSAGES
+  success_he: "%{obj} <strong>%{name}</strong> був успішно %{act}"
+  success_she: "%{obj} <strong>%{name}</strong> була успішно %{act}"
+  success_it: "%{obj} <strong>%{name}</strong> було успішно %{act}"
+  error: Щось пішло не так...
+  # ACTIONS
+  created_he: створений
+  created_she: створена
+  created_it: створено
+  updated_he: оновлений
+  updated_she: оновлена
+  updated_it: оновлено
+  destroyed_he: знищений
+  destroyed_she: знищена
+  destroyed_it: знищено
+
+  # ACTIVERECORD
+  activerecord:
+    errors:
+      models:
+        category:
+          attributes:
+            name:
+              blank: Назва категорії не може бути порожньою

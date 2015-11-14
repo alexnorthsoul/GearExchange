@@ -1,0 +1,11 @@
+.search-panel
+  .row
+    = search_form_for @q, url: admin_categories_path do |f|
+      .large-4.columns
+        = f.label :name_cont, t(:name)
+        = f.search_field :name_cont
+      .large-4.columns
+        = f.label :parent_name_cont, t(:parent)
+        = f.search_field :parent_name_cont
+      .large-4.columns
+        = f.submit t(:seach), class:'button small'
