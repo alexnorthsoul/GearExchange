@@ -1,9 +1,13 @@
 uk:
   # WORDS - УСІ ЗАГАЛЬНІ СЛОВА
+  home: Головна
   front: Фронт
   dashboard: Панель управління
   about: Про проект
+  help: Допомога
+  admin: Управління
   name: Назва
+  title: Заголовок
   description: Опис
   parent: Батько
   actions: Дії
@@ -12,6 +16,7 @@ uk:
   delete: Знищити
   back: Назад
   seach: Пошук
+  author: Автор
 
   # CATEGORIES - КАТЕГОРІЇ
   category: Категорія
@@ -19,3 +24,15 @@ uk:
   add_category: Додати категорію
   save_category: Зберегти категорію
   edit_category: Редагувати категорію
+
+  # POSTS - ОГОЛОШЕННЯ
+  post: Оголошення
+  posts: Оголошення
+  add_post: Додати оголошення
+  save_post: Зберегти оголошення
+  edit_post: Редагувати оглошення
+
+  # COMMENTS - КОМЕНТАРІ
+  comment: Коментар
+  comments: Коментарі
+  add_comment: Додати коментар

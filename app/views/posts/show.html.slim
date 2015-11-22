@@ -1,0 +1,25 @@
+- content_for :page_title,  t(:post)
+- content_for :page_header, t(:post)
+
+#posts
+  .column.align-middle.post
+
+    .post-header = post.title
+
+    .post-body   = post.description
+
+    .post-footer.row
+      .post-category.column.medium-4
+        = fa_icon('list-alt')
+        = link_to post.category.name, '#' if post.category
+      .post-comments.column.medium-3
+        = fa_icon(:comments)
+        = post.comments.size    if post.comments
+      .post-author.column.medium-3
+        = fa_icon(:user)
+        = post.author.full_name if post.author
+      .post-actions.column.medium-2.text-center
+        = link_to fa_icon(:pencil), edit_post_path(post)
+        = link_to fa_icon(:trash),  post, data: { confirm: 'Are you sure?'}, method: :delete
+
+== render 'comments'

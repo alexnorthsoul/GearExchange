@@ -6,7 +6,7 @@ html
     body id="page--#{controller.controller_name}-#{controller.action_name}"
       = render 'layouts/header'
 
-      main#main-content role="main"
+      main#main-content role="main" class="row"
 
         #content
           - if content_for?(:page_header)
