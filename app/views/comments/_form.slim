@@ -1,0 +1,11 @@
+h3 = t(:add_comment)
+
+= simple_form_for [post, comment] do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title,   label: t(:title)
+    = f.input :comment, label: t(:comment), as: :text, input_html: { rows: 8}
+
+  .form-actions
+    .buttons = f.submit t(:add_comment), class:'button success'

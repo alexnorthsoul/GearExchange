@@ -1,0 +1,13 @@
+= simple_form_for(post) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title,       label: t(:title)
+    = f.input :description, label: t(:description), as: :text, input_html: { rows: 8}
+    = f.label :category_id, label: t(:category)
+    = f.select :category_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" }, include_blank: '---'
+
+  .form-actions
+    .buttons = f.submit t(:save_post), class:'button success'
+
+= link_to fa_icon('arrow-left', text: t(:back)), posts_path

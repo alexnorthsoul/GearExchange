@@ -1,0 +1,27 @@
+@import '../colors';
+
+#comments {
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  .comments-collection {
+    margin-bottom: 50px;
+  }
+
+  .comment {
+    margin-top: 20px;
+    padding: 10px;
+    min-height: 75px;
+    background-color: $snow;
+    border: 2px solid $white-smoke;
+
+    .commen-title {
+      font-weight: bold;
+    }
+
+    .comment-info {
+      text-align: right;
+      font-size: 0.7em;
+    }
+  }
+}

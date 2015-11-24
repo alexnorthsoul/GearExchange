@@ -1,0 +1,8 @@
+#comments.column.large-8.medium-8
+  h3
+    = t(:comments)
+    = " (#{post.comments.recent.size})"
+
+  .comments-collection == render 'comments/collection'
+
+  .comments-form       == render 'comments/form'

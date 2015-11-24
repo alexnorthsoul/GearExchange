@@ -1,0 +1,5 @@
+  - post.comments.each do |comment|
+    = div_for comment
+      .commen-title    = comment.title
+      .cooment-comment = comment.comment
+      .comment-info = comment.created_at.strftime('%e %b %Y')

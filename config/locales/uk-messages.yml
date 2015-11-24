@@ -19,6 +19,12 @@ uk:
   activerecord:
     errors:
       models:
+        post:
+          attributes:
+            title:
+              blank: Заговолок не може бути порожнім
+            description:
+              blank: Опис не може пути порожнім
         category:
           attributes:
             name:

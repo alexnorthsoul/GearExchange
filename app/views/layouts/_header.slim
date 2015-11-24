@@ -1,9 +1,11 @@
 .icon-bar.five-up
   a.item href="#{root_path}"
-    label Home
+    label = t(:home)
+  a.item href="#{posts_path}"
+    label = t(:posts)
   a.item href="#{about_path}"
-    label About
+    label = t(:about)
   a.item href="#{help_path}"
-    label Help
+    label = t(:help)
   a.item href="#{admin_path}"
-    label Admin
+    label = t(:admin)

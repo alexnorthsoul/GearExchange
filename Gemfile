@@ -33,6 +33,9 @@ gem 'inline_svg'
 gem 'breadcrumble'
 gem 'awesome_nested_set'
 gem 'ransack'
+gem 'friendly_id'
+gem 'acts_as_commentable'
+gem 'acts_as_votable'
 
 # --------------- DEV & TEST---------------------
 group :development, :test do
