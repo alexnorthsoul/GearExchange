@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2285705791">
+    <data-source source="LOCAL" name="PostgreSQL - gearx@localhost" uuid="532eecb2-ae86-40c2-84be-c9f5bb724c2a">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/gearx</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
