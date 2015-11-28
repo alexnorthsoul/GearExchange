@@ -27,7 +27,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # ------------------- ACRH ----------------------
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-facebook', '1.5.0' # new versions doesnt work correctly (1.6.0, 2.0.0, 2.0.1)
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'simple_form'
 gem 'flutie'

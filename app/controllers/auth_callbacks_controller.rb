@@ -1,4 +1,18 @@
 class AuthCallbacksController < Devise::OmniauthCallbacksController
+  def auth
+    @user    = User.from_omniauth(request.env['omniauth.auth'])
+
+    provider = User.where(email: @user.email).first.try(:provider)
+
+    if @user.invalid? && provider.present?
+      @user.errors.add(:provider, "You have already registered via #{provider.capitalize}. PLease use button 'Sign in with #{provider.capitalize}'")
+
+      redirect_to :root,  alert: @user.errors.messages[:provider][0]
+    else
+      sign_in_and_redirect @user
+    end
+  end
+
   # {"provider"=>"facebook",
   #  "uid"=>"842530649194394",
   #  "info"=>
@@ -12,9 +26,7 @@ class AuthCallbacksController < Devise::OmniauthCallbacksController
   #      {"raw_info"=>{ ... }}
   # }
   def facebook
-    @user = User.from_omniauth(request.env['omniauth.auth'])
-
-    sign_in_and_redirect @user
+    auth
   end
 
   # {"provider"=>"github",
@@ -31,11 +43,10 @@ class AuthCallbacksController < Devise::OmniauthCallbacksController
   #      {"raw_info"=> { ... }}
   # }
   def github
-    @user = User.from_omniauth(request.env['omniauth.auth'])
-
-    sign_in_and_redirect @user
+    auth
   end
 
-  def vkontakte
+  def google_oauth2
+    auth
   end
 end
