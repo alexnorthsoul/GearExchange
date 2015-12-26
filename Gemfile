@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# ruby '2.2.2'
+ruby '2.1.6'
 
 # -------------------- RAILS --------------------
 gem 'rails', '4.2.4'
@@ -41,6 +41,11 @@ gem 'ransack'
 gem 'friendly_id'
 gem 'acts_as_commentable'
 gem 'acts_as_votable'
+
+# --------------- PRODUCTION---------------------
+group :production do
+  gem 'rails_12factor'
+end
 
 # --------------- DEV & TEST---------------------
 group :development, :test do
