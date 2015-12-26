@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.0'
 
 # ------------------- TOOLS ---------------------
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'rails-i18n'
+gem 'babosa'
 
 # ------------------- ACRH ----------------------
 gem 'devise'

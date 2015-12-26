@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = post.comments.build(comment_params)
+    @comment.author = current_user
     @comment.save ? flash[:success] = t(:success_he, obj: t(:comment), name: @comment.title, act: t(:created_he)) : flash[:error] = t(:error)
     respond_with @comment, location: post
   end
@@ -18,7 +19,7 @@ class CommentsController < ApplicationController
   private
 
   def comment
-    @comment = comment.find(params[:id])
+    @comment ||= comment.find(params[:id])
   end
 
   def comments

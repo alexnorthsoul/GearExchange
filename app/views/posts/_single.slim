@@ -1,0 +1,33 @@
+.column.align-middle.post
+  .post-header = link_to post.title, post
+  .post-body   = post.description
+  .post-footer.row
+    .post-author.column.medium-3
+      = fa_icon(:user)
+      = post.author.full_name if post.author
+
+    .post-timestamp.column.medium-3
+      = fa_icon(:calendar)
+      = timestamp_display(post.created_at)
+
+    .post-category.column.medium-2
+      = link_to fa_icon('list-alt')+post.category.name, posts_path(category: post.category_id), class: 'simple' if post.category
+
+    .post-votes.column.medium-3
+      - if current_user.voted_for? post
+        span         = fa_icon('pie-chart')
+        span.r-space = votes_up_info(post)
+        span         = votes_down_info(post)
+      - else
+        span = link_to fa_icon('hand-paper-o')+t(:vote_up)+'!', vote_up_post_path(post), method: :put, class: 'simple r-space'
+        span = link_to fa_icon('close')+t(:vote_down)+'!',      vote_down_post_path(post), method: :put, class: 'simple'
+
+    .post-comments.column.medium-1
+      = fa_icon(:comments)
+      = post.comments.size if post.comments
+      /= last_comment_info(post)
+
+/    - if post.author == current_user || current_user.admin?
+/      .post-actions.column.medium-2.text-center
+/        = link_to fa_icon(:pencil), edit_post_path(post)
+/        = link_to fa_icon(:trash),  post, data: { confirm: t(:are_you_sure?)}, method: :delete

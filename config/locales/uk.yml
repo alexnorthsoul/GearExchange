@@ -17,6 +17,8 @@ uk:
   back: Назад
   seach: Пошук
   author: Автор
+  ago: тому
+  all: Усі
 
   # CATEGORIES - КАТЕГОРІЇ
   category: Категорія
@@ -24,6 +26,7 @@ uk:
   add_category: Додати категорію
   save_category: Зберегти категорію
   edit_category: Редагувати категорію
+  filter_by_categories: Фільтр за категорією
 
   # POSTS - ОГОЛОШЕННЯ
   post: Оголошення
@@ -31,8 +34,15 @@ uk:
   add_post: Додати оголошення
   save_post: Зберегти оголошення
   edit_post: Редагувати оглошення
+  no_posts: Оголошення відсутні
 
   # COMMENTS - КОМЕНТАРІ
   comment: Коментар
   comments: Коментарі
   add_comment: Додати коментар
+  last_comment: останній
+
+  # VOTES | LIKES ...
+  votes: підтримали
+  vote_up: За
+  vote_down: Проти

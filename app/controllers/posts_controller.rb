@@ -1,18 +1,18 @@
 class PostsController < ApplicationController
   respond_to :html, :json
 
-  helper_method :posts, :post, :comment
+  helper_method :posts, :post, :comment, :categories
 
   def index
     respond_with posts
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
     @post.save ? flash[:success] = t(:success_it, obj: t(:post), name: @post.title, act: t(:created_it)) : flash[:error] = t(:error)
     respond_with @post
   end
@@ -29,6 +29,18 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def vote_up
+    post.liked_by current_user
+
+    respond_with(post)
+  end
+
+  def vote_down
+    post.disliked_by current_user
+
+    respond_with(post)
+  end
+
   private
 
   def post
@@ -36,11 +48,19 @@ class PostsController < ApplicationController
   end
 
   def posts
-    @posts ||= Post.all
+    if params[:category].present?
+      @posts ||= Post.where(category_id: params[:category]).order(created_at: :desc)
+    else
+      @posts ||= Post.all.order(created_at: :desc)
+    end
   end
 
   def comment
-    @comment = post.comments.build
+    @comment ||= post.comments.build
+  end
+
+  def categories
+    @categories ||= Category.all.order(name: :asc)
   end
 
   def post_params
