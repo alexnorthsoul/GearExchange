@@ -1,6 +1,6 @@
 .column.align-middle.post
   .post-header = link_to post.title, post
-  .post-body   = post.description
+  .post-body   = post.description.html_safe
   .post-footer.row
     .post-author.column.medium-3
       = fa_icon(:user)
