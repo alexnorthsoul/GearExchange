@@ -1,0 +1,23 @@
+@import '../colors';
+
+#sidebar {
+  margin-top: 30px;
+  margin-left: 15px;
+
+  .block {
+    .block-title {
+      font-size: 1.1em;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .block-body {}
+  }
+
+  ul.categories {
+    margin-left: 0;
+    list-style: none;
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}

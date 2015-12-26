@@ -15,7 +15,12 @@
     background-color: $snow;
     border: 2px solid $white-smoke;
 
-    .commen-title {
+    .comment-author {
+      font-size: 0.7em;
+      font-weight: bold;
+    }
+
+    .comment-title {
       font-weight: bold;
     }
 

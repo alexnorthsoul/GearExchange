@@ -1,5 +1,7 @@
 @import '../colors';
 
+// --- MAIN -------------------------------------------------------------------
+
 #main-content {
   #content {
     h2.page-header {
@@ -7,3 +9,24 @@
     }
   }
 }
+
+// --- BUTTONS & LINKS --------------------------------------------------------
+
+a.simple {
+  padding-bottom: 5px;
+  &:hover {
+    border-bottom: 2px solid $primary-color;
+  }
+}
+
+// --- HELPERS ----------------------------------------------------------------
+
+.r-space { margin-right: 15px;  }
+.l-space { margin-left: 15px;   }
+.t-space { margin-top: 15px;    }
+.b-space { margin-bottom: 15px; }
+
+.r-space2x { margin-right: 30px;  }
+.l-space2x { margin-left: 30px;   }
+.t-space2x { margin-top: 30px;    }
+.b-space2x { margin-bottom: 30px; }
